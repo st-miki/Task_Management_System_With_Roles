@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: flex-start; /* align text to the left */
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #5B00A5, #8A00B5); /* gradient background */
+  padding: 0px;
+}
+
+.content {
+  text-align: left; /* align text to the left */
+  max-width: 900px;
+  padding: 0 20px;
+  margin-left: 35px;
+  color: white; /* white text color */
+}
+
+.title {
+  margin-bottom: 12px;
+  color: white; /* white text color */
+  font-size: 3rem; /* bigger font size */
+  font-weight: bold; /* make it bolder */
+  font-size: 3em;
+  line-height: 1.1;
+}
+
+.paragraph {
+  margin-bottom: 40px;
+  color: white; /* white text color */
+  font-size: 1.4rem; /* bigger font size */
+  line-height: 1.6;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-start; /* align buttons to the left */
+}
+
+.button {
+  margin: 0 10px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: #5B00A5; /* purple text color */
+  background-color: white; /* white background */
+  border: 2px solid #5B00A5; /* purple border */
+  text-align: center; /* align text to center */
+}
+
+.button:hover {
+  background-color: #5B00A5; /* purple background on hover */
+  color: white; /* white text on hover */
+  border-color: #5B00A5; /* purple border on hover */
+  transform: translateY(-2px);
+}
+

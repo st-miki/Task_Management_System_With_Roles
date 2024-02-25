@@ -1,8 +1,7 @@
-// Home.js
 import React from 'react';
 import { Typography, Button } from 'antd';
 import { Link } from 'react-router-dom';
-import './Styles/Home.css'; // Import the CSS file
+import '../Styles/Home.css'; // Import the CSS file
 
 const { Title, Paragraph } = Typography;
 
@@ -10,7 +9,7 @@ const Home = () => {
   return (
     <div className="container">
       <div className="content">
-        <Title level={2} className="title">Welcome to Your Task Manager</Title>
+        <p className="title">Welcome to Your Task Manager</p>
         <Paragraph className="paragraph">
           Manage your tasks efficiently with our collaborative task management system.
         </Paragraph>

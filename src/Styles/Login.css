@@ -1,0 +1,48 @@
+/* Login.css */
+.login-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #5B00A5, #8A00B5);
+}
+
+.login-container {
+  width: 400px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.login-form {
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: #5B00A5; /* Purple text color */
+  background-color: white; /* White background */
+  border: 2px solid #5B00A5; /* Purple border */
+}
+
+.login-btn:hover {
+  background-color: #5B00A5; /* Purple background on hover */
+  color: white; /* White text on hover */
+}
+
+.signup-link {
+  margin-top: 10px;
+  text-align: center;
+  color: #5B00A5; /* Purple text color */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; /* White text color */
+}

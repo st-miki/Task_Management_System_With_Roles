@@ -1,0 +1,51 @@
+.header {
+    background-color: #5B00A5;
+    border-radius: 10px;
+    display: flex; /* Ensure the child elements align properly */
+    justify-content: space-between;
+    align-items: center; /* Align items vertically center */
+    padding: 0 24px; /* Add padding to create space around elements */
+  }
+  
+  .brand-title {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: auto; /* Push the user info to the right */
+  }
+  
+  .user-info {
+    color: white;
+    font-size: 0.9rem;
+    display: flex; /* Ensure the icon and text are in a row */
+    align-items: center; /* Align items vertically center */
+    font-weight: 700;
+  }
+ /* Target the .sidebar class inside the Layout component */
+.Layout .sidebar {
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    
+  }
+  .sidebar{
+    margin-top: 13px;
+  }
+  :where(.css-dev-only-do-not-override-1k979oh).ant-layout .ant-layout-sider-children {
+    height: 100%;
+    margin-top: -12px;
+    padding-top: 10px;
+    background-color: white;
+}  
+
+Link{
+  color: #5B00A5;
+}
+.bento-box-menu{
+   
+    
+    
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    
+    
+}

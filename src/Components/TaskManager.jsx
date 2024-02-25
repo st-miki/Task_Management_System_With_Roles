@@ -1,41 +1,61 @@
 import React from 'react';
-import { Layout, Menu, Avatar } from 'antd';
-import { UserOutlined, DashboardOutlined, ScheduleOutlined } from '@ant-design/icons';
-import { Outlet, Link } from 'react-router-dom';
-import Dashboard from './Dashboard'; // Import Dashboard component
-import TaskList from './TaskList'; // Import TaskList component
+import { Layout, Avatar, Tabs } from 'antd';
+import { UserOutlined, DashboardOutlined, ScheduleOutlined, TeamOutlined, BellOutlined, MessageOutlined } from '@ant-design/icons';
+import { Outlet, useNavigate } from 'react-router-dom';
+import '../Styles/TaskManager.css'; // Import the external stylesheet
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Sider, Content } = Layout;
+const { TabPane } = Tabs; // Destructure TabPane from Tabs
 
 const TaskManager = () => {
+  const navigate = useNavigate(); // Hook to navigate programmatically
+
+  // Function to handle tab change and navigate to the corresponding route
+  const handleTabChange = (key) => {
+    switch (key) {
+      case '1':
+        navigate('/dashboard');
+        break;
+      case '2':
+        navigate('/tasks');
+        break;
+      case '3':
+        navigate('/teams');
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
-    <Layout style={{ minHeight: '100vh' }}>
-      <Header className="header" style={{ padding: 0 }}>
-        <div className="logo" style={{ float: 'left', color: 'white', paddingLeft: '20px', marginTop: '-10px' }}>
-          <h1>Logo</h1>
+    <Layout style={{ minHeight: '100vh' }} theme='light'>
+      <Header className="header" theme='light'>
+        <div className="logo">
+          <span className='brand-title'>Task Manager</span>
         </div>
-        <div style={{ float: 'right', paddingRight: '20px' }}>
+        <div className="user-info">
+          <div className='icon-wrapper' style={{ marginRight: '10px' }}>
+            <BellOutlined style={{fontSize:'22px'}}/>
+          </div>          
+          <div className='icon-wrapper' style={{ marginRight: '10px' }}>
+            <MessageOutlined style={{fontSize:'22px'}}/>
+          </div>
           <Avatar size="large" icon={<UserOutlined />} />
-          <span style={{ color: 'white', paddingLeft: '10px' }}>Username</span>
+          <span style={{marginLeft:'5px'}}>Ayalqebet Zenabu</span>
         </div>
       </Header>
       <Layout>
-        <Sider theme="dark">
-          <div className="logo" />
-          <Menu theme="dark" mode="vertical">
-            <Menu.Item key="1" icon={<DashboardOutlined />} style={{ color: 'white' }}>
-              <Link to="/dashboard">Dashboard</Link>
-            </Menu.Item>
-            <Menu.Item key="2" icon={<ScheduleOutlined />} style={{ color: 'white' }}>
-              <Link to="/tasks">Tasks</Link>
-            </Menu.Item>
-          </Menu>
+        <Sider className="sidebar" theme='light'>
+          <Tabs defaultActiveKey="1" tabPosition="left" style={{ height: '100vh', color: 'purple' }} onChange={handleTabChange}>
+            <TabPane tab={<><DashboardOutlined style={{marginLeft:'37px'}}/><span className='bento-box-menu' style={{marginLeft:'10px'}}>Dashboard</span></>} key="1" />
+            <TabPane tab={<><ScheduleOutlined style={{marginLeft:'37px'}} /><span className='bento-box-menu' style={{marginLeft:'10px'}}>Tasks</span></>} key="2" />
+            <TabPane tab={<><TeamOutlined  style={{marginLeft:'37px'}}/><span className='bento-box-menu' style={{marginLeft:'10px'}}>Teams</span></>} key="3" />
+          </Tabs>
         </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
-          <Content style={{ padding: '24px', minHeight: 280 }}>
-            <Outlet /> {/* Render child routes */}
+        <Layout>
+          <Content style={{ padding: '24px' }}>
+            <Outlet />
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Footer</Footer>
         </Layout>
       </Layout>
     </Layout>

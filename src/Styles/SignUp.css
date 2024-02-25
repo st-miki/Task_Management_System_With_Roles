@@ -1,0 +1,64 @@
+/* Signup.css */
+.signup-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #5B00A5, #8A00B5);
+}
+
+.signup-container {
+  width: 400px; /* Set a fixed width */
+  max-width: 800px; /* Add a max-width for responsiveness */
+  margin: 20px auto; /* Center the container and provide spacing */
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.signup-form {
+  width: 100%; /* Make the form fill the container */
+  max-width: 400px; /* Limit the form width */
+}
+
+.signup-btn {
+  width: 100%;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  color: #5B00A5; /* Purple text color */
+  background-color: white; /* White background */
+  border: 2px solid #5B00A5; /* Purple border */
+}
+
+.login-link {
+  margin-top: 10px;
+  text-align: center;
+  color: #5B00A5; /* Purple text color */
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff; /* Purple text color */
+}
+
+.btn-prv{
+  background-color: 'white' ;
+  color: #5B00A5;
+  border: none;
+  border-radius: 8px;
+  margin-right: 50px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn-nxt{
+  background-color: 'white' ;
+  color: #5B00A5;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

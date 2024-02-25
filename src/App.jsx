@@ -4,10 +4,10 @@ import PrivateRoute from './Components/PrivateRoute'; // Adjust the import path 
 import Home from './Components/Home';
 import Login from './Components/Login';
 import SignUp from './Components/SignUp';
-import TaskList from './Components/TaskList';
-import TaskDetails from './Components/TaskDetails';
+import TaskList from './Components/TaskPage/TaskList';
+import Teams from './Components/TaskPage/Teams';
 import TaskManager from './Components/TaskManager'; // Import the TaskManager component
-import Dashboard from './Components/Dashboard';
+import Dashboard from './Components/TaskPage/Dashboard';
 
 function App() {
   return (
@@ -21,10 +21,11 @@ function App() {
         {/* <Route path="/TaskManager" element={<PrivateRoute />}>
           <Route index element={<TaskManager />} />
         </Route> */}
-          <Route path="tasks" element={<TaskList />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/tasks" element={<TaskList userRole="user"/>} />
+          <Route path="/dashboard" element={<Dashboard userRole="admin"/>} />
+          <Route path="/teams" element={<Teams userRole="user"/>} />
         </Route>
-        <Route path="/tasks/:id" element={<TaskDetails />} />
+        
         {/* <Route path="/tasks" element={<PrivateRoute />}>
           <Route index element={<TaskList />} />
           <Route path=":id" element={<TaskDetails />} />
