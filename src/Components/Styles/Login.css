@@ -1,0 +1,23 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  
+  .login-form {
+    margin-bottom: 20px;
+  }
+  
+  .login-btn {
+    width: 100%;
+  }
+  
+  .signup-link {
+    margin-top: 10px;
+    text-align: center;
+  }
+  

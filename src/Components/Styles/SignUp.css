@@ -1,0 +1,30 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto; /* Change height to auto to fit content */
+    margin: 20px auto; /* Add margin to center and provide spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 150px;
+    max-width: 400px;
+  }
+  
+  .signup-form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+  }
+  
+  .login-link {
+    margin-top: 10px;
+    text-align: center;
+    
+  }
+  
